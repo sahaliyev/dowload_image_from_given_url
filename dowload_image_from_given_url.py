@@ -2,7 +2,7 @@ import os
 import random
 from os.path import splitext, basename
 from urllib.parse import urlparse
-from user_agents import user_agents
+from user_agents import user_agents  # constant file contains some user agents
 import requests
 
 
@@ -22,7 +22,7 @@ class DownloadImage:
 
     @staticmethod
     def get_random_user_agent():
-        return random.choice(user_agents)
+        return random.choice(user_agents)  # for every request different user agent will be selected
 
     @staticmethod
     def get_file_name(url):
